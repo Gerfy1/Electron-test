@@ -23,5 +23,10 @@ ipcMain.on("select-file", async (event) => {
         filters: [{
             name: "Audio Files", extensions: ["mp3", "wav"]
         }],
-    })
-})
+    });
+
+    if (filePaths.length > 0) {
+        event.reply("file-selected", filePaths[0]);
+    }
+
+});
