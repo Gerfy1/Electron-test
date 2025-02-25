@@ -13,7 +13,7 @@ app.whenReady().then(() => {
         },
     });
 
-    mainWindows.loadfile("index.html");
+    mainWindow.loadfile("index.html");
 });
 
 
