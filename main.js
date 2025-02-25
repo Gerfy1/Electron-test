@@ -30,3 +30,7 @@ ipcMain.on("select-file", async (event) => {
     }
 
 });
+
+app.on("window-all-closed", ()=>{
+    if (process.plataform !== "darwin") app.quit();
+});
