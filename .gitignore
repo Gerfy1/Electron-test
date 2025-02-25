@@ -1,0 +1,5 @@
+node_modules/
+echo "node_modules/" >> .gitignore
+git add .gitignore
+git commit -m "Adicionando node_modules ao .gitignore"
+git push Electron-test main
