@@ -11,9 +11,10 @@ app.whenReady().then(() => {
             nodeIntegration: true,
             contextIsolation: false,
         },
+        autoHideMenuBar: true,
     });
 
-    mainWindow.loadfile("index.html");
+    mainWindow.loadFile("index.html");
 });
 
 
@@ -32,5 +33,5 @@ ipcMain.on("select-file", async (event) => {
 });
 
 app.on("window-all-closed", ()=>{
-    if (process.plataform !== "darwin") app.quit();
+    if (process.platform !== "darwin") app.quit();
 });
